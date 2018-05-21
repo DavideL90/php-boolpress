@@ -16,11 +16,24 @@ $space-right: 10px;
 }
 
 .text_cnt{
+
+   &::after{
+      content: '';
+      display: table;
+      clear: both;
+   }
+
    .text-img{
       float: left;
       margin-right: $space-right;
    }
+
    p{
       margin-right: $space-right;
    }
+}
+
+.tags{
+   color: grey;
+   padding-top: 20px;
 }

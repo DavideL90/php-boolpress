@@ -21,6 +21,16 @@
                   <img class="text-img" src= <?php echo $post['image'] ?> >
                   <p> <?php echo $post['content']; ?> </p>
                </div>
+               <div class="tags">
+                  Tags:
+                  <?php foreach ($post['tag'] as $key => $tag) {
+                     if($key == (count($post['tag']) - 1)){
+                        echo $tag;
+                     }else{
+                        echo $tag . ', ';
+                     }
+                  } ?>
+               </div>
             <?php }
          }
       ?>
