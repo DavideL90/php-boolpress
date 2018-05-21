@@ -1,0 +1,26 @@
+$space-left: 10px;
+$space-right: 10px;
+
+#title_cnt{
+   padding-left: $space-left;
+   background: #44d9e6;
+   .postTitle{
+      padding: 100px 0 50px;
+   }
+
+   .data{
+      color: grey;
+      font-size: 14px;
+      margin-bottom: 50px;
+   }
+}
+
+.text_cnt{
+   .text-img{
+      float: left;
+      margin-right: $space-right;
+   }
+   p{
+      margin-right: $space-right;
+   }
+}

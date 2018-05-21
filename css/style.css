@@ -6,7 +6,7 @@
   font-family: 'Oswald', sans-serif;
 }
 
-header {
+#blogTitle {
   height: 400px;
   background-image: url("https://www.freewebheaders.com/wordpress/wp-content/gallery/computer/blue-computer-keyboard-stones-on-grass-background-header.jpg");
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@ header {
   background-size: 100% 100%;
 }
 
-header .overlay {
+#blogTitle .overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,7 +23,7 @@ header .overlay {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-header h1 {
+#blogTitle h1 {
   margin: auto;
   color: white;
   font-size: 80px;
@@ -38,7 +38,6 @@ header h1 {
   float: left;
   margin: 50px;
   width: 350px;
-  height: 435px;
   padding: 20px;
   background-color: #ffbf80;
 }
@@ -69,5 +68,29 @@ header h1 {
   content: '';
   display: table;
   clear: both;
+}
+
+#title_cnt {
+  padding-left: 10px;
+  background: #44d9e6;
+}
+
+#title_cnt .postTitle {
+  padding: 100px 0 50px;
+}
+
+#title_cnt .data {
+  color: grey;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+.text_cnt .text-img {
+  float: left;
+  margin-right: 10px;
+}
+
+.text_cnt p {
+  margin-right: 10px;
 }
 
