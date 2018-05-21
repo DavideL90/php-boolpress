@@ -1,0 +1,40 @@
+#square_cnt{
+   padding: 50px;
+
+   .post_square{
+      float: left;
+      margin: 50px;
+      width: 350px;
+      height: 435px;
+      padding: 20px;
+      background-color: #ffbf80;
+
+      .post_title{
+         color: black;
+         font-size: 22px;
+         text-decoration: none;
+      }
+
+      .data{
+         color: grey;
+         margin-top: 20px;
+         font-size: 14px;
+      }
+
+      .overview{
+            margin-top: 20px;
+      }
+   }
+
+   #message{
+      margin-top: 50px;
+      font-size: 35px;
+      text-align: center;
+   }
+
+   &::after{
+      content: '';
+      display: table;
+      clear: both;
+   }
+}
