@@ -35,17 +35,36 @@
             <?php }
          }
       ?>
+      <div class="comments">
+
+      </div>
+
       <script type="text/javascript">
          $(document).ready(function(){
-            var slugWord = <?php echo $keyWord; ?>
+            var slugWord = "<?php echo $keyWord; ?>"
             console.log(slugWord);
-            // $.ajax(){
-            //    url: 'http://localhost/php-boolpress/comments.php',
-            //    method: 'GET',
-            //    data: {
-            //
-            //    },
-            // }
+            $.ajax({
+               url: 'http://localhost/php-boolpress/comments.php',
+               method: 'GET',
+               data: {
+                  'slugWord': slugWord
+               },
+               success: function(data){
+                  var formatData = JSON.parse(data);
+                  console.log(formatData);
+                  var commentCnt = $('.comments');
+                  for (var i = 0; i < formatData.length; i++) {
+                     commentCnt.append('<div class="singleComment">' +
+                                       '<h5 class="commentTitle">' + formatData[i].name +  ' - ' + '<span class="email-comment">' + formatData[i].email + '</h5>' +
+                                       '<p class="comment-text">' + formatData[i].body + '</p>' +
+                                       '</div>');
+
+                  }
+               },
+               error: function(){
+                  alert('Errore!');
+               }
+            });
          });
       </script>
    </body>
