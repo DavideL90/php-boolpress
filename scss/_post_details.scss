@@ -1,5 +1,6 @@
 $space-left: 10px;
 $space-right: 10px;
+$space20px: 20px;
 
 #title_cnt{
    padding-left: $space-left;
@@ -16,7 +17,7 @@ $space-right: 10px;
 }
 
 .text_cnt{
-   padding: 0 20px;
+   padding: 0 $space20px;
    &::after{
       content: '';
       display: table;
@@ -35,6 +36,25 @@ $space-right: 10px;
 
 .tags{
    color: grey;
-   padding: 20px 20px 0;
-   margin-bottom: 20px;
+   padding: $space20px $space20px 0;
+   margin-bottom: $space20px;
+}
+
+.comments{
+   .singleComment{
+      background-color: lightgrey;
+      margin: $space20px;
+      padding: $space20px;
+      border-radius: 5px;
+   }
+   .commentTitle{
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: $space20px;
+      
+      .email-comment{
+         font-size: 16px;
+         font-weight: normal;
+      }
+   }
 }

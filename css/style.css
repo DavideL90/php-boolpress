@@ -138,3 +138,21 @@
   margin-bottom: 20px;
 }
 
+.comments .singleComment {
+  background-color: lightgrey;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.comments .commentTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.comments .commentTitle .email-comment {
+  font-size: 16px;
+  font-weight: normal;
+}
+
