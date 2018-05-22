@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <link rel="stylesheet" href="css/style.css">
       <title></title>
    </head>
@@ -34,6 +35,18 @@
             <?php }
          }
       ?>
-
+      <script type="text/javascript">
+         $(document).ready(function(){
+            var slugWord = <?php echo $keyWord; ?>
+            console.log(slugWord);
+            // $.ajax(){
+            //    url: 'http://localhost/php-boolpress/comments.php',
+            //    method: 'GET',
+            //    data: {
+            //
+            //    },
+            // }
+         });
+      </script>
    </body>
 </html>

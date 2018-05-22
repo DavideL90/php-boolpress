@@ -16,7 +16,7 @@ $space-right: 10px;
 }
 
 .text_cnt{
-
+   padding: 0 20px;
    &::after{
       content: '';
       display: table;
@@ -35,5 +35,11 @@ $space-right: 10px;
 
 .tags{
    color: grey;
-   padding-top: 20px;
+   padding: 20px 20px 0;
+   margin-bottom: 20px;
+}
+
+#showCommentLink{
+   text-decoration: none;
+   color: black;
 }

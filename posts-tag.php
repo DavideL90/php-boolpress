@@ -8,6 +8,7 @@
    <body>
       <?php
          include 'data.php';
+         include 'data-comments.php';
          // prendo i dati del form
          $tag = $_GET;
          $tagToSearch = $tag['tagChoice'];

@@ -113,6 +113,10 @@
   margin-bottom: 50px;
 }
 
+.text_cnt {
+  padding: 0 20px;
+}
+
 .text_cnt::after {
   content: '';
   display: table;
@@ -130,6 +134,12 @@
 
 .tags {
   color: grey;
-  padding-top: 20px;
+  padding: 20px 20px 0;
+  margin-bottom: 20px;
+}
+
+#showCommentLink {
+  text-decoration: none;
+  color: black;
 }
 
