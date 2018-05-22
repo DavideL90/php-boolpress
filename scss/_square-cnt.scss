@@ -1,9 +1,9 @@
 #square_cnt{
-   padding: 50px;
+   display: flex;
+   flex-wrap: wrap;
 
    .post_square{
-      float: left;
-      margin: 50px;
+      margin: 20px;
       width: 350px;
       padding: 20px;
       background-color: #ffbf80;

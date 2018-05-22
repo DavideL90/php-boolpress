@@ -16,9 +16,9 @@
             <h1>My personal blog</h1>
          </div>
          <nav>
-            <form id="searchTagForm" action="post-detail.php" method="post">
-               <select class="" name="">
-                  <option id="noChoice" class="tagChoice" value="noValue" selected disabled>Scegli un tag</option>
+            <form id="searchTagForm" action="posts-tag.php" method="get">
+               <select class="tagChoice" name="tagChoice">
+                  <option id="noVal" value="noValue" disabled>Scegli un tag</option>
                   <?php
                      $arrayOfTags = [];
                      foreach ($posts as $post) {
@@ -30,7 +30,7 @@
                         }
                      } ?>
                </select>
-               <input type="submit" name="searchBtn" value="Cerca">
+               <input id="inputBtn" type="submit" value="Cerca">
             </form>
          </nav>
       </header>
@@ -64,15 +64,22 @@
 
       <script type="text/javascript">
          $(document).ready(function(){
+            //variabilizzo il form
             var myForm = $('#searchTagForm');
+            //faccio si che la select sia puntata sul placeholder quando torno indietro
+            $('#noVal').prop('selected', true);
+            //disabilito il submit di default
+            $('#inputBtn').prop('disabled', true);
+            //quando uso la select abilito il tasto
+            $('.tagChoice').change(function(){
+               $('#inputBtn').prop('disabled', false);
+            });
+            //gestisco il submit
             myForm.submit(function(e){
                var tagValue = $('.tagChoice').val();
                if(tagValue == 'noValue'){
                   alert('Scegli un tag dal menù a tendina');
                   return false;
-               }
-               else{
-
                }
             });
          });
